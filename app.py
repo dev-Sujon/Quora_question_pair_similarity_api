@@ -24,7 +24,7 @@ def main():
         
         # Display the similarity score
         st.write("Similarity Score:", similarity_score)
-        if similarity_score >= 0.5:  # Corrected the condition
+        if similarity_score >= 0.75:  # Corrected the condition
             st.write("Duplicate[1]")
         else:
             st.write("Not Duplicate[0]")
