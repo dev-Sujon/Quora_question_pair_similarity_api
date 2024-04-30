@@ -46,7 +46,14 @@ if st.button("Check Similarity"):
             st.write("**Not Duplicate [0]**")
     except Exception as e:
         st.error(f"**Error computing similarity:** {e}")
-        
+
+# Define function to run subprocess
+def run_dashboard():
+    try:
+        subprocess.run(["streamlit", "run", "dashboard.py"])
+    except Exception as e:
+        st.error(f"Error opening dashboard: {e}")
+
 # Move the "EDA" button below the selected approach
 if st.sidebar.button("EDA", key="eda_sidebar_button"):
-    subprocess.Popen(["streamlit", "run", "dashboard.py"])
+    run_dashboard()
