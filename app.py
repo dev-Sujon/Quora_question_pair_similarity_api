@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from scipy.spatial.distance import cosine
 
 # Main content
-st.title("**Question Similarity Checker**")
+st.title("**Quora Question Pair Similarity Checker**")
 st.write("Exploring Question Similarity: Techniques, Tools, and Best Practices")
 # User input for questions
 question1 = st.text_input("Enter the first question:")
