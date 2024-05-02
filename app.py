@@ -2,7 +2,6 @@ import streamlit as st
 import subprocess
 from sentence_transformers import SentenceTransformer
 from scipy.spatial.distance import cosine
-import time
 
 # Main content
 st.title("**Question Similarity Checker**")
@@ -48,14 +47,5 @@ if st.button("Check Similarity"):
     except Exception as e:
         st.error(f"**Error computing similarity:** {e}")
 
-# Define function to run subprocess
-def run_dashboard():
-    try:
-        subprocess.run(["streamlit", "run", "dashboard.py"])
-        time.sleep(5)  # Add a delay of 5 seconds before shutting down Streamlit
-    except Exception as e:
-        st.error(f"Error opening dashboard: {e}")
 
-# Move the "EDA" button below the selected approach
-if st.sidebar.button("EDA", key="eda_sidebar_button"):
-    run_dashboard()
+
