@@ -29,7 +29,7 @@ try:
         threshold = 0.70  # Define threshold for Hugging Face approach
     elif selected_approach == "Deep Learning":
         model = SentenceTransformer("sentence-transformers/msmarco-distilbert-base-tas-b")
-        threshold = 0.55 
+        threshold = 0.50
 except Exception as e:
     st.error(f"Error loading the model: {e}")
     st.stop()
